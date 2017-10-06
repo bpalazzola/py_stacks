@@ -2,7 +2,7 @@ from flask import Flask, session, request, redirect, render_template
 
 app = Flask(__name__)
 
-app.secret_key = 'd41d8cd98f00b204e9800998ecf8427e'
+app.secret_key = 'd41d8cd98fe'
 
 
 @app.route('/')
