@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title> :Add a Friend: </title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Friend Since</th>
+                <th> </th>
+            </tr>
+        </thead>
+        {% for friend in friends %}
+        <tbody>
+            <tr>
+                <td>{{friend.name}}</td>
+                <td>{{friend.age}}</td>
+                <td>{{friend.created_at}}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+    <br>
+    <h2>Add a Friend</h2>
+    <table>
+        <form action='/addvalue' method='POST'>
+            <label for="name">Name:
+                <input type="text" name="name" id="name">
+            </label>
+            <br>
+            <label for="age">Age:      
+                <input type="text" name="age" id="age">
+            </label>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </table>
+    
+</body>
+
+</html>
