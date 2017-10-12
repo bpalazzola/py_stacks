@@ -5,10 +5,10 @@ from sqlalchemy.sql import text
 
 
 class MySQLConnection(object):
-    def __init__(self, app, db):
+    def __init__(self, app, mydb):
         config = {
             'host': 'localhost',
-            'database': db,  # we got db as an argument
+            'database': mydb,  # we got db as an argument
             'user': 'root',
             'password': 'root',
             'port': '3306'  # change the port to match the port your SQL server is running on
@@ -42,5 +42,5 @@ class MySQLConnection(object):
 # This is the module method to be called by the user in server.py. Make sure to provide the db name!
 
 
-def MySQLConnector(app, db):
-    return MySQLConnection(app, db)
+def MySQLConnector(app, mydb):
+    return MySQLConnection(app, mydb)
