@@ -33,7 +33,11 @@
                 </form>
                  {% for reply in comments %}
                 <p>{{reply['comment']}}</p>
-                if
+                    {% if comments %}
+                        {% for comment in comments %}
+                            <h3>{{ comment['comment'] }}</h3>
+                            {% endfor %}
+                    {% endif %}
                  {% endfor %}
 
             {% endfor %}
