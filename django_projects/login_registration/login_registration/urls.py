@@ -1,4 +1,4 @@
-"""time_display URL Configuration
+"""login_registration URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -17,6 +17,6 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
+    url(r'^', include('apps.login_registration_app.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^', include('apps.time_display_app.urls'))
 ]
