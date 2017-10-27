@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey Form</title>
+</head>
+<body>
+    <form action="/process" method="POST">
+        {% csrf_token %}
+        <label for="user_username">User Name:</label>
+        <input type="text" name="user_username">
+        <br>
+        <br>
+        <label for="user_location">Dojo Location:</label>
+        <select name="user_location">
+            <option selected hidden>Choose here</option>>
+            <option value="Chicago">Chicago</option>
+            <option value="Seattle">Seattle</option>
+            <option value="Dallas">Dallas</option>
+        </select>
+        <br>
+        <br>
+        <label for="user_language">Favorite Language:</label>
+        <select name="user_language">
+            <option selected hidden>Choose here</option>
+            <option value="Python">Python</option>
+            <option value="C#">C#</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Node.js">Node.js</option>
+            <option value="MEAN Stack">MEAN Stack</option>
+        </select>
+        <br>
+        <br>
+        <p>Comment (Optional):</p>
+        <textarea name="user_description"></textarea>
+        <br>
+        <br>
+        <input type="submit" value="Submit"/>
+
+
+    </form>
+    
+</body>
+</html>
