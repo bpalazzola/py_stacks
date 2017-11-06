@@ -1,9 +1,16 @@
 h2{
     color: darkblue;
     text-decoration: underline;
-    font-size: 26pt;
+    font-size: 52pt;
 }
 
-label{
+h4{
+    color:#4f90a0;
+    font-size: 28pt;
+    background-color: navy;
+}
+
+.container{
     color: darkblue;
+    background-color: rgb(78, 97, 78);
 }

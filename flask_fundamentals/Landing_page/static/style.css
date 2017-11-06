@@ -1,0 +1,14 @@
+* {
+    background-color: black;
+    color: white;
+    font-size: 32px;
+    font-style: italic;
+}
+
+.main {
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    display: block;
+    background-color: lightgreen;
+}

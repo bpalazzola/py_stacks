@@ -1,4 +1,4 @@
-from flask import Flask, render_template, render_static
+from flask import Flask, render_template
 app = Flask(__name__)
 
 
@@ -8,11 +8,11 @@ def index():
 
 
 @app.route('/ninjas')
-def index():
+def ninjas():
     return render_template('ninjas.html')
 
 
-@app.route('/dojo/new')
+@app.route('/dojo')
 def dojo():
     return render_template('dojo.html')
 
